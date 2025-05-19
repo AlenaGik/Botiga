@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="index" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Botiga de Productes amb carret de compres interactiu.">
+<title>Botiga de Productes</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+<img class="logo" src="img/logo.PNG" alt="Tu hogar">
+<div id="tienda" ><h1>Botiga de Productes</h1></div>
+</header>
+<main>
+<section>
+<h2>Productes</h2>
+<ul id="product-list">
+<li class="product-card">
+    <img src="img/memoria-16gb-bambu-rotatorio-600x600.jpg" alt="memoria-16gb-bambu-rotatorio-600x600">
+<p>Memòria 16gb (bambu rotatori) - Preu: €12</p>
+<button accesskey="1" onclick="addToCart('Memòria 16gb', 12)">Comprar</button>
+</li>
+<li class="product-card">
+    <img src="img/altavoz-bambu-bluetooth-pla-1-600x600.jpg" alt="altavos altavoz-bambu-bluetooth-pla-1-600x600">
+<p>Altaveu (bambu-bluetooth) - Preu: €25</p>
+<button accesskey="2" onclick="addToCart('Altaveu', 25)">Comprar</button>
+</li>
+<li class="product-card">
+    <img src="img/marco-fotos-estacion-meteorologica-madera.jpg" alt="marco-fotos-estacion-meteorologica-madera">
+<p>Marc foto (estació meteorològica, fusta) - Preu: €20</p>
+<button accesskey="3" onclick="addToCart('Marc foto', 20)">Comprar</button>
+</li>
+</ul>
+</section>
+<section id="carrito">
+
+<h2> Carret de compra</h2>
+
+<ul id="cart-list"></ul>
+<p id="cart-total">Total: €0</p>
+</section>
+<section>
+
+<h2>Formulari de Contacte</h2>
+<form id="contact-form" onsubmit="validateForm(event)">
+<label for="name">Nom:</label>
+<input type="text" id="name" name="name" required>
+<span class="error-missatge" id="error-name"></span>
+
+<label for="email">Correu Electrònic:</label>
+<input type="email" id="email" name="email" required>
+<span class="error-message" id="error-email"></span>
+
+<label for="phone">Telèfon:</label>
+<input type="text" id="phone" name="phone" required>
+<span class="error-message" id="error-phone"></span>
+
+<label for="comments">Comentaris:</label>
+<textarea id="comments" name="comments"></textarea>
+
+<button type="submit">Enviar</button>
+</form>
+</section>
+</main>
+<footer>
+    <p>Elena Gikaeva</p>
+<p id="footer-info"></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
